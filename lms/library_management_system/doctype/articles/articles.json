@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "field:article_name",
  "creation": "2024-06-08 13:55:15.772887",
@@ -15,7 +16,9 @@
   "publisher",
   "isbn",
   "section_break_jcgw",
-  "description"
+  "description",
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -68,14 +71,27 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2024-06-08 14:51:52.307083",
+ "modified": "2024-06-08 16:34:42.656901",
  "modified_by": "Administrator",
  "module": "Library Management System",
- "name": "Article",
+ "name": "Articles",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
@@ -90,8 +106,30 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Library Member",
+   "share": 1
   }
  ],
+ "route": "articles",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []
