@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-06-29 15:26:51.288199",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_info",
+  "photo",
+  "profile_photo",
+  "column_break_0w9x",
+  "publisher_name",
+  "email",
+  "phone_number",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "photo",
+   "fieldtype": "Image",
+   "label": "Photo",
+   "options": "profile_photo"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_0w9x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personal_info",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "publisher_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-29 18:44:38.767377",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Publisher",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "publisher_name"
+}

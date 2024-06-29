@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class LIbrarySettings(Document):
+class Category(Document):
 	pass

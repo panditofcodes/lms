@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{####}",
+ "creation": "2024-06-29 15:27:22.417474",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information",
+  "photo",
+  "profile_photo",
+  "column_break_qxbf",
+  "member_name",
+  "email",
+  "phone_number",
+  "address",
+  "other_information",
+  "membership",
+  "column_break_ql3m",
+  "plan",
+  "column_break_uame",
+  "allotted_books",
+  "column_break_g6bc",
+  "allotted_magzine"
+ ],
+ "fields": [
+  {
+   "fieldname": "photo",
+   "fieldtype": "Image",
+   "label": "photo",
+   "options": "profile_photo"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "membership",
+   "fieldtype": "Select",
+   "label": "Membership",
+   "options": "Standerd\nPremium"
+  },
+  {
+   "default": "Yearly",
+   "fieldname": "plan",
+   "fieldtype": "Select",
+   "label": "Plan",
+   "options": "Monthly\nYearly"
+  },
+  {
+   "fieldname": "allotted_books",
+   "fieldtype": "Int",
+   "label": "Allotted Books"
+  },
+  {
+   "fieldname": "allotted_magzine",
+   "fieldtype": "Int",
+   "label": "Allotted Magzine"
+  },
+  {
+   "fieldname": "personal_information",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qxbf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "other_information",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ql3m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uame",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_g6bc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Items",
+   "link_fieldname": "tittle"
+  }
+ ],
+ "modified": "2024-06-29 18:54:35.080963",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Members",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Library Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "member_name"
+}

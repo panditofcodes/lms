@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "autoname": "format:{#####}",
+ "creation": "2024-06-29 15:26:00.603514",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "books",
+  "photo",
+  "profile_photo",
+  "column_break_qhxv",
+  "tittle",
+  "item_type",
+  "column_break_pcmp",
+  "category",
+  "publisher",
+  "section_break_zklo",
+  "writter",
+  "column_break_dszp",
+  "isbn",
+  "column_break_4zyp",
+  "book_status",
+  "column_break_ud8w",
+  "allotted_to",
+  "section_break_dav3",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "books",
+   "fieldtype": "Section Break",
+   "label": "Add Item"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Publisher",
+   "options": "Publisher",
+   "reqd": 1
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "writter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Writter",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "default": "Available",
+   "fieldname": "book_status",
+   "fieldtype": "Select",
+   "label": "Book Status",
+   "options": "Available\nAllotted"
+  },
+  {
+   "fieldname": "allotted_to",
+   "fieldtype": "Data",
+   "label": "Allotted To"
+  },
+  {
+   "fieldname": "column_break_pcmp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zklo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4zyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ud8w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dav3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_type",
+   "fieldtype": "Select",
+   "label": "Item Type",
+   "options": "Select\nBook\nMagazine",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dszp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tittle",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tittle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qhxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Image",
+   "options": "profile_photo"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Category",
+   "link_fieldname": "category_name"
+  },
+  {
+   "link_doctype": "Publisher",
+   "link_fieldname": "publisher_name"
+  }
+ ],
+ "modified": "2024-06-29 18:52:33.040086",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Items",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Library Member",
+   "share": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Available"
+  },
+  {
+   "color": "Red",
+   "title": "Allotted"
+  }
+ ],
+ "title_field": "tittle"
+}

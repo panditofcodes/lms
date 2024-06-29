@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-29 15:27:42.925302",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "book_information",
+  "book",
+  "column_break_5rdn",
+  "category",
+  "column_break_g3rr",
+  "publisher",
+  "column_break_h0zb",
+  "status",
+  "member_information",
+  "member",
+  "column_break_nasp",
+  "allot_from",
+  "column_break_mzsa",
+  "allot_to",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "book",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Book",
+   "options": "Items",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "book.category",
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fetch_from": "book.publisher",
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fetch_from": "book.book_status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "allot_from",
+   "fieldtype": "Date",
+   "label": "Allot From"
+  },
+  {
+   "fieldname": "allot_to",
+   "fieldtype": "Date",
+   "label": "Allot To"
+  },
+  {
+   "fieldname": "book_information",
+   "fieldtype": "Section Break",
+   "label": "Book Information"
+  },
+  {
+   "fieldname": "column_break_5rdn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_g3rr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_h0zb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nasp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mzsa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Members"
+  },
+  {
+   "fieldname": "member_information",
+   "fieldtype": "Section Break",
+   "label": "Member Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Allot",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Members",
+   "link_fieldname": "member_name"
+  }
+ ],
+ "modified": "2024-06-29 17:43:22.492150",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Allot",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Librarian",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Library Member",
+   "share": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
