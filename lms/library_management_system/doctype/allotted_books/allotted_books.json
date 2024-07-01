@@ -6,8 +6,10 @@
  "engine": "InnoDB",
  "field_order": [
   "book_information",
-  "book",
+  "item_name",
   "column_break_5rdn",
+  "item_type",
+  "column_break_xrpy",
   "category",
   "column_break_g3rr",
   "publisher",
@@ -23,27 +25,19 @@
  ],
  "fields": [
   {
-   "fieldname": "book",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Book",
-   "options": "Items",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "book.category",
+   "fetch_from": "item_name.category",
    "fieldname": "category",
    "fieldtype": "Data",
    "label": "Category"
   },
   {
-   "fetch_from": "book.publisher",
+   "fetch_from": "item_name.publisher",
    "fieldname": "publisher",
    "fieldtype": "Data",
    "label": "Publisher"
   },
   {
-   "fetch_from": "book.book_status",
+   "fetch_from": "item_name.item_status",
    "fieldname": "status",
    "fieldtype": "Data",
    "label": "Status"
@@ -51,12 +45,14 @@
   {
    "fieldname": "allot_from",
    "fieldtype": "Date",
-   "label": "Allot From"
+   "label": "Allot From",
+   "reqd": 1
   },
   {
    "fieldname": "allot_to",
    "fieldtype": "Date",
-   "label": "Allot To"
+   "label": "Allot To",
+   "reqd": 1
   },
   {
    "fieldname": "book_information",
@@ -87,7 +83,8 @@
    "fieldname": "member",
    "fieldtype": "Link",
    "label": "Member",
-   "options": "Members"
+   "options": "Members",
+   "reqd": 1
   },
   {
    "fieldname": "member_information",
@@ -99,10 +96,28 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Allot",
+   "options": "Allotted Books",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "options": "Items",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_name.item_type",
+   "fieldname": "item_type",
+   "fieldtype": "Data",
+   "label": "Item Type"
+  },
+  {
+   "fieldname": "column_break_xrpy",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -113,10 +128,10 @@
    "link_fieldname": "member_name"
   }
  ],
- "modified": "2024-06-29 17:43:22.492150",
+ "modified": "2024-07-01 15:29:04.538445",
  "modified_by": "Administrator",
  "module": "Library Management System",
- "name": "Allot",
+ "name": "Allotted Books",
  "owner": "Administrator",
  "permissions": [
   {
@@ -163,7 +178,8 @@
    "read": 1,
    "report": 1,
    "role": "Library Member",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "creation",

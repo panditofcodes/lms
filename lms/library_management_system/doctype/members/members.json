@@ -7,21 +7,27 @@
  "engine": "InnoDB",
  "field_order": [
   "personal_information",
-  "photo",
-  "profile_photo",
   "column_break_qxbf",
-  "member_name",
   "email",
+  "member_name",
   "phone_number",
   "address",
+  "column_break_dkjq",
+  "profile_photo",
+  "photo",
   "other_information",
   "membership",
-  "column_break_ql3m",
   "plan",
   "column_break_uame",
   "allotted_books",
+  "books_can_be_allotted",
+  "having_books",
+  "allowed_books",
   "column_break_g6bc",
-  "allotted_magzine"
+  "allotted_magzine",
+  "magzines_can_be_allotted",
+  "having_magazine",
+  "allowed_magazine"
  ],
  "fields": [
   {
@@ -31,25 +37,31 @@
    "options": "profile_photo"
   },
   {
+   "fetch_from": "email.user_image",
    "fieldname": "profile_photo",
    "fieldtype": "Attach Image",
    "label": "Profile Photo"
   },
   {
    "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
+   "fieldtype": "Link",
+   "label": "Email",
+   "options": "User",
+   "reqd": 1,
+   "unique": 1
   },
   {
+   "fetch_from": "email.mobile_no",
    "fieldname": "phone_number",
    "fieldtype": "Data",
    "label": "Phone Number"
   },
   {
+   "default": "Standard",
    "fieldname": "membership",
    "fieldtype": "Select",
    "label": "Membership",
-   "options": "Standerd\nPremium"
+   "options": "Standard\nPremium"
   },
   {
    "default": "Yearly",
@@ -77,6 +89,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "email.location",
    "fieldname": "address",
    "fieldtype": "Data",
    "label": "Address"
@@ -84,10 +97,6 @@
   {
    "fieldname": "other_information",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_ql3m",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_uame",
@@ -98,11 +107,47 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "email.full_name",
    "fieldname": "member_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "books_can_be_allotted",
+   "fieldtype": "Int",
+   "label": "Books Can Be Allotted"
+  },
+  {
+   "fieldname": "magzines_can_be_allotted",
+   "fieldtype": "Int",
+   "label": "Magzines Can be allotted"
+  },
+  {
+   "default": "0",
+   "fieldname": "having_books",
+   "fieldtype": "Int",
+   "label": "Having Books"
+  },
+  {
+   "fieldname": "column_break_dkjq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allowed_books",
+   "fieldtype": "Int",
+   "label": "Allowed Books"
+  },
+  {
+   "fieldname": "allowed_magazine",
+   "fieldtype": "Int",
+   "label": "Allowed Magazine"
+  },
+  {
+   "fieldname": "having_magazine",
+   "fieldtype": "Int",
+   "label": "Having Magazine"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -112,7 +157,7 @@
    "link_fieldname": "tittle"
   }
  ],
- "modified": "2024-06-29 18:54:35.080963",
+ "modified": "2024-07-01 18:10:51.998465",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Members",

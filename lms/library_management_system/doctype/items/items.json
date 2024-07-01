@@ -19,7 +19,7 @@
   "column_break_dszp",
   "isbn",
   "column_break_4zyp",
-  "book_status",
+  "item_status",
   "column_break_ud8w",
   "allotted_to",
   "section_break_dav3",
@@ -64,13 +64,6 @@
    "fieldname": "description",
    "fieldtype": "Long Text",
    "label": "Description"
-  },
-  {
-   "default": "Available",
-   "fieldname": "book_status",
-   "fieldtype": "Select",
-   "label": "Book Status",
-   "options": "Available\nAllotted"
   },
   {
    "fieldname": "allotted_to",
@@ -127,6 +120,13 @@
   {
    "fieldname": "profile_photo",
    "fieldtype": "Attach Image"
+  },
+  {
+   "default": "Available",
+   "fieldname": "item_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nAllotted"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -140,7 +140,7 @@
    "link_fieldname": "publisher_name"
   }
  ],
- "modified": "2024-06-29 18:52:33.040086",
+ "modified": "2024-07-01 15:10:59.660321",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Items",
@@ -184,13 +184,15 @@
    "write": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Library Member",
-   "share": 1
+   "share": 1,
+   "write": 1
   }
  ],
  "show_title_field_in_link": 1,
