@@ -13,6 +13,8 @@ frappe.ui.form.on("Allotted Books", {
 	},
 
 	before_save: async function (frm) {
+		await frappe.db.set_value("Items", frm.doc.item_name, "item_status", "Allotted");
+
 		if (frm.doc.item_type === "Book") {
 			let havingBooks;
 			let allottedBooks;
@@ -108,4 +110,6 @@ async function returnItem(frm) {
 
 		frapp.msgprint("Magazine Returned!");
 	}
+
+	await frappe.db.set_value("Items", frm.doc.item_name, "item_status", "Available");
 }

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{item_name}-to-{member}",
  "creation": "2024-06-29 15:27:42.925302",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -128,10 +129,11 @@
    "link_fieldname": "member_name"
   }
  ],
- "modified": "2024-07-01 15:29:04.538445",
+ "modified": "2024-07-02 12:58:02.405571",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Allotted Books",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
