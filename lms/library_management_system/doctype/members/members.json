@@ -18,6 +18,8 @@
   "other_information",
   "membership",
   "plan",
+  "book_credit",
+  "magazine_credit",
   "column_break_uame",
   "allotted_books",
   "books_can_be_allotted",
@@ -148,6 +150,20 @@
    "fieldname": "having_magazine",
    "fieldtype": "Int",
    "label": "Having Magazine"
+  },
+  {
+   "default": "0",
+   "fieldname": "book_credit",
+   "fieldtype": "Int",
+   "label": "Book Credit",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "magazine_credit",
+   "fieldtype": "Int",
+   "label": "Magazine Credit",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -157,7 +173,7 @@
    "link_fieldname": "tittle"
   }
  ],
- "modified": "2024-07-01 18:10:51.998465",
+ "modified": "2024-07-02 11:14:23.995584",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Members",

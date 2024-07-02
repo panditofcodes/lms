@@ -23,7 +23,9 @@
   "column_break_ud8w",
   "allotted_to",
   "section_break_dav3",
-  "description"
+  "description",
+  "wait_list_sec",
+  "wait_list"
  ],
  "fields": [
   {
@@ -127,6 +129,16 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Available\nAllotted"
+  },
+  {
+   "fieldname": "wait_list_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wait_list",
+   "fieldtype": "Table",
+   "label": "Wait List",
+   "options": "Wait List"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -140,7 +152,7 @@
    "link_fieldname": "publisher_name"
   }
  ],
- "modified": "2024-07-01 15:10:59.660321",
+ "modified": "2024-07-02 12:53:02.093488",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Items",

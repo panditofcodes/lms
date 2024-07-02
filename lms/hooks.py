@@ -133,23 +133,23 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"lms.tasks.all"
-# 	],
-# 	"daily": [
-# 		"lms.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"lms.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"lms.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"lms.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"lms.tasks.all"
+	# ],
+	"daily": [
+		"lms.library_management_system.allot_credit.allot_credit"
+	],
+	# "hourly": [
+	# 	"lms.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"lms.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"lms.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------
