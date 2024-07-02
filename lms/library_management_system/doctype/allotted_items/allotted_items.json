@@ -132,7 +132,7 @@
  "modified": "2024-07-02 12:58:02.405571",
  "modified_by": "Administrator",
  "module": "Library Management System",
- "name": "Allotted Books",
+ "name": "Allotted Items",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

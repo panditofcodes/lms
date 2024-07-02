@@ -6,6 +6,7 @@ frappe.ui.form.on("Items", {
 		let allotItem = false;
 		let userDetails;
 		let userMail = frappe.session.user_email;
+		
 
 		$(
 			'div[data-fieldname="books"],div[data-fieldname="section_break_zklo"],div[data-fieldname="section_break_dav3"]'
@@ -13,7 +14,7 @@ frappe.ui.form.on("Items", {
 			border: "none",
 		});
 
-		try {
+		if(createBtn){try {
 			let res = await frappe.call({
 				method: "lms.library_management_system.api.get_members",
 				args: {
@@ -39,6 +40,13 @@ frappe.ui.form.on("Items", {
 		} catch (error) {
 			console.error("Error fetching user details: ", error);
 			frappe.msgprint("Unable to fetch user details. Please try again later.");
+		}}
+	},
+
+	before_save: function (frm) {
+		if (frm.doc.item_type === "Select") {
+			validated = false;
+			frappe.msgprint("Please select item type");
 		}
 	},
 });
