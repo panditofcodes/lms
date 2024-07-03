@@ -14,7 +14,7 @@ frappe.ui.form.on("Items", {
 			border: "none",
 		});
 
-		if(createBtn){try {
+		if(frm.doc.create_btn){try {
 			let res = await frappe.call({
 				method: "lms.library_management_system.api.get_members",
 				args: {
@@ -48,6 +48,7 @@ frappe.ui.form.on("Items", {
 			validated = false;
 			frappe.msgprint("Please select item type");
 		}
+		frm.set_value("create_btn",1)
 	},
 });
 

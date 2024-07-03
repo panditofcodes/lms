@@ -25,7 +25,8 @@
   "section_break_dav3",
   "description",
   "wait_list_sec",
-  "wait_list"
+  "wait_list",
+  "create_btn"
  ],
  "fields": [
   {
@@ -139,6 +140,14 @@
    "fieldtype": "Table",
    "label": "Wait List",
    "options": "Wait List"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_btn",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "Create Button"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -152,7 +161,7 @@
    "link_fieldname": "publisher_name"
   }
  ],
- "modified": "2024-07-02 12:53:02.093488",
+ "modified": "2024-07-03 10:59:13.959638",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Items",

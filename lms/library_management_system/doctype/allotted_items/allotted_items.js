@@ -7,9 +7,13 @@ frappe.ui.form.on("Allotted Items", {
 			border: "none",
 		});
 
-		frm.add_custom_button(`Return ${frm.doc.item_type}`, () => {
-			returnItem(frm);
-		});
+		if (frm.doc.create_btn) {
+			frm.add_custom_button(`Return ${frm.doc.item_type}`, () => {
+				returnItem(frm);
+			});
+		}
+
+		
 	},
 
 	before_save: async function (frm) {
@@ -80,6 +84,8 @@ frappe.ui.form.on("Allotted Items", {
 				`${magazineCredit - 1}`
 			);
 		}
+
+		frm.set_value("create_btn",1)
 	},
 });
 

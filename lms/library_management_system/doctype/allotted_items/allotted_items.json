@@ -22,7 +22,9 @@
   "allot_from",
   "column_break_mzsa",
   "allot_to",
-  "amended_from"
+  "amended_from",
+  "section_break_pcxt",
+  "create_btn"
  ],
  "fields": [
   {
@@ -97,7 +99,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Allotted Books",
+   "options": "Allotted Items",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -119,6 +121,19 @@
   {
    "fieldname": "column_break_xrpy",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pcxt",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "create_btn",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "Create Button"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -129,7 +144,7 @@
    "link_fieldname": "member_name"
   }
  ],
- "modified": "2024-07-02 12:58:02.405571",
+ "modified": "2024-07-03 11:01:49.550938",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Allotted Items",

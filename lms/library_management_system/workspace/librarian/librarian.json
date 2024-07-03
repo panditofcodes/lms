@@ -1,0 +1,66 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"l_iaE22CuK\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Librarian</span>\",\"col\":12}},{\"id\":\"QGVxWs76eE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Confirm Allottment\",\"col\":3}},{\"id\":\"juNTOeItUQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Allotted items\",\"col\":3}},{\"id\":\"y8rVZyVtpL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Member\",\"col\":3}},{\"id\":\"fmDcb4qgMc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Item\",\"col\":3}}]",
+ "creation": "2024-07-02 13:38:44.469864",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "support",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Librarian",
+ "links": [],
+ "modified": "2024-07-03 11:04:07.389973",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Librarian",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Librarian"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add Member",
+   "link_to": "Members",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Confirm Allottment",
+   "link_to": "Allotted Items",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add Item",
+   "link_to": "Items",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Allotted items",
+   "link_to": "Allotted Items",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Librarian"
+}
