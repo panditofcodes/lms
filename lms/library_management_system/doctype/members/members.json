@@ -18,7 +18,7 @@
   "other_information",
   "membership_type",
   "plan",
-  "pay",
+  "transaction_id",
   "column_break_uame",
   "book_credit",
   "book_limit",
@@ -26,7 +26,8 @@
   "column_break_g6bc",
   "magzine_credit",
   "magazine_limit",
-  "rented_magazines"
+  "rented_magazines",
+  "amended_from"
  ],
  "fields": [
   {
@@ -115,11 +116,6 @@
    "options": "Standard\nPremium"
   },
   {
-   "fieldname": "pay",
-   "fieldtype": "Button",
-   "label": "Pay"
-  },
-  {
    "default": "0",
    "fieldname": "book_limit",
    "fieldtype": "Int",
@@ -148,16 +144,34 @@
    "fieldname": "rented_books",
    "fieldtype": "Int",
    "label": "Rented Books"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Members",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Pay Amount",
+   "fieldname": "transaction_id",
+   "fieldtype": "Data",
+   "label": "Transaction ID",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [
   {
    "link_doctype": "Items",
    "link_fieldname": "tittle"
   }
  ],
- "modified": "2024-07-03 17:15:48.704352",
+ "modified": "2024-07-03 18:41:59.302496",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Members",

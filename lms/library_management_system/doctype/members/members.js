@@ -3,7 +3,6 @@
 
 frappe.ui.form.on("Members", {
 	async refresh(frm) {
-	
 		$('div[data-fieldname="photo"]').css({
 			height: "150px",
 			width: "150px",
@@ -11,7 +10,7 @@ frappe.ui.form.on("Members", {
 		$('div[data-fieldname="personal_information"]').css({
 			border: "none",
 		});
-
+		setValue(frm);
 	},
 	// before_save: function(frm){
 	// 	if(frm.doc.membership === "Standard"){
@@ -24,16 +23,24 @@ frappe.ui.form.on("Members", {
 	// },
 
 	membership_type: function (frm) {
-		if (frm.doc.membership_type === "Standard") {
-			frm.set_value("book_credit", 3);
-			frm.set_value("book_limit", 1);
-			frm.set_value("magzine_credit", 1);
-			frm.set_value("magazine_limit", 1);
-		} else {
-			frm.set_value("book_credit", 10);
-			frm.set_value("book_limit", 3);
-			frm.set_value("magzine_credit", 1500);
-			frm.set_value("magazine_limit", 1500);
-		}
+		setValue(frm);
+	},
+
+	after_save(frm) {
+		frappe.set_route("Form", "subscription", "new");
 	},
 });
+
+function setValue(frm) {
+	if (frm.doc.membership_type === "Standard") {
+		frm.set_value("book_credit", 3);
+		frm.set_value("book_limit", 1);
+		frm.set_value("magzine_credit", 1);
+		frm.set_value("magazine_limit", 1);
+	} else {
+		frm.set_value("book_credit", 10);
+		frm.set_value("book_limit", 3);
+		frm.set_value("magzine_credit", 1500);
+		frm.set_value("magazine_limit", 1500);
+	}
+}
