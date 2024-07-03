@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class AllottedItems(Document):
+class RentedItems(Document):
 	pass

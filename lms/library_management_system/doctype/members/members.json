@@ -16,20 +16,17 @@
   "profile_photo",
   "photo",
   "other_information",
-  "membership",
+  "membership_type",
   "plan",
-  "book_credit",
-  "magazine_credit",
+  "pay",
   "column_break_uame",
-  "allotted_books",
-  "books_can_be_allotted",
-  "having_books",
-  "allowed_books",
+  "book_credit",
+  "book_limit",
+  "rented_books",
   "column_break_g6bc",
-  "allotted_magzine",
-  "magzines_can_be_allotted",
-  "having_magazine",
-  "allowed_magazine"
+  "magzine_credit",
+  "magazine_limit",
+  "rented_magazines"
  ],
  "fields": [
   {
@@ -59,28 +56,11 @@
    "label": "Phone Number"
   },
   {
-   "default": "Standard",
-   "fieldname": "membership",
-   "fieldtype": "Select",
-   "label": "Membership",
-   "options": "Standard\nPremium"
-  },
-  {
-   "default": "Yearly",
+   "default": "Annualy",
    "fieldname": "plan",
    "fieldtype": "Select",
    "label": "Plan",
-   "options": "Monthly\nYearly"
-  },
-  {
-   "fieldname": "allotted_books",
-   "fieldtype": "Int",
-   "label": "Allotted Books"
-  },
-  {
-   "fieldname": "allotted_magzine",
-   "fieldtype": "Int",
-   "label": "Allotted Magzine"
+   "options": "Monthly\nAnnualy"
   },
   {
    "fieldname": "personal_information",
@@ -117,53 +97,57 @@
    "reqd": 1
   },
   {
-   "fieldname": "books_can_be_allotted",
-   "fieldtype": "Int",
-   "label": "Books Can Be Allotted"
-  },
-  {
-   "fieldname": "magzines_can_be_allotted",
-   "fieldtype": "Int",
-   "label": "Magzines Can be allotted"
-  },
-  {
-   "default": "0",
-   "fieldname": "having_books",
-   "fieldtype": "Int",
-   "label": "Having Books"
-  },
-  {
    "fieldname": "column_break_dkjq",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "allowed_books",
-   "fieldtype": "Int",
-   "label": "Allowed Books"
-  },
-  {
-   "fieldname": "allowed_magazine",
-   "fieldtype": "Int",
-   "label": "Allowed Magazine"
-  },
-  {
-   "fieldname": "having_magazine",
-   "fieldtype": "Int",
-   "label": "Having Magazine"
   },
   {
    "default": "0",
    "fieldname": "book_credit",
    "fieldtype": "Int",
    "label": "Book Credit",
-   "read_only": 1
+   "non_negative": 1
+  },
+  {
+   "default": "Standard",
+   "fieldname": "membership_type",
+   "fieldtype": "Select",
+   "label": "Membership",
+   "options": "Standard\nPremium"
+  },
+  {
+   "fieldname": "pay",
+   "fieldtype": "Button",
+   "label": "Pay"
   },
   {
    "default": "0",
-   "fieldname": "magazine_credit",
+   "fieldname": "book_limit",
    "fieldtype": "Int",
-   "label": "Magazine Credit",
-   "read_only": 1
+   "label": "Book Limit"
+  },
+  {
+   "default": "0",
+   "fieldname": "magazine_limit",
+   "fieldtype": "Int",
+   "label": "Magzine Limit"
+  },
+  {
+   "default": "0",
+   "fieldname": "rented_magazines",
+   "fieldtype": "Int",
+   "label": "Rented Magazines"
+  },
+  {
+   "default": "0",
+   "fieldname": "magzine_credit",
+   "fieldtype": "Int",
+   "label": "Magzine Credit"
+  },
+  {
+   "default": "0",
+   "fieldname": "rented_books",
+   "fieldtype": "Int",
+   "label": "Rented Books"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -173,7 +157,7 @@
    "link_fieldname": "tittle"
   }
  ],
- "modified": "2024-07-02 11:14:23.995584",
+ "modified": "2024-07-03 17:15:48.704352",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Members",

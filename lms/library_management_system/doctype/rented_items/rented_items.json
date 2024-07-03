@@ -147,7 +147,7 @@
  "modified": "2024-07-03 11:01:49.550938",
  "modified_by": "Administrator",
  "module": "Library Management System",
- "name": "Allotted Items",
+ "name": "Rented Items",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
