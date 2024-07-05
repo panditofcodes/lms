@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Librarian",
  "links": [],
- "modified": "2024-07-03 11:04:07.389973",
+ "modified": "2024-07-04 13:59:48.943627",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Librarian",
@@ -31,17 +31,17 @@
  "shortcuts": [
   {
    "color": "Grey",
-   "doc_view": "New",
-   "label": "Add Member",
-   "link_to": "Members",
+   "doc_view": "List",
+   "label": "Confirm Allottment",
+   "link_to": "Rented Items",
    "stats_filter": "[]",
    "type": "DocType"
   },
   {
    "color": "Grey",
-   "doc_view": "List",
-   "label": "Confirm Allottment",
-   "link_to": "Allotted Items",
+   "doc_view": "New",
+   "label": "Add Member",
+   "link_to": "Subscription",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -57,7 +57,7 @@
    "color": "Grey",
    "doc_view": "List",
    "label": "Allotted items",
-   "link_to": "Allotted Items",
+   "link_to": "Rented Items",
    "stats_filter": "[]",
    "type": "DocType"
   }

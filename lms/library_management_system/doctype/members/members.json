@@ -7,14 +7,14 @@
  "engine": "InnoDB",
  "field_order": [
   "personal_information",
+  "column_break_dkjq",
+  "profile_photo",
+  "photo",
   "column_break_qxbf",
   "email",
   "member_name",
   "phone_number",
   "address",
-  "column_break_dkjq",
-  "profile_photo",
-  "photo",
   "other_information",
   "membership_type",
   "plan",
@@ -37,7 +37,6 @@
    "options": "profile_photo"
   },
   {
-   "fetch_from": "email.user_image",
    "fieldname": "profile_photo",
    "fieldtype": "Attach Image",
    "label": "Profile Photo"
@@ -46,22 +45,21 @@
    "fieldname": "email",
    "fieldtype": "Link",
    "label": "Email",
-   "options": "User",
+   "options": "Subscription",
    "reqd": 1,
    "unique": 1
   },
   {
-   "fetch_from": "email.mobile_no",
    "fieldname": "phone_number",
    "fieldtype": "Data",
    "label": "Phone Number"
   },
   {
-   "default": "Annualy",
+   "fetch_from": "email.billing_cycle",
    "fieldname": "plan",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "label": "Plan",
-   "options": "Monthly\nAnnualy"
+   "read_only": 1
   },
   {
    "fieldname": "personal_information",
@@ -72,7 +70,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "email.location",
    "fieldname": "address",
    "fieldtype": "Data",
    "label": "Address"
@@ -90,60 +87,59 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "email.full_name",
+   "fetch_from": "email.member",
    "fieldname": "member_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Name",
-   "reqd": 1
+   "label": "Name"
   },
   {
    "fieldname": "column_break_dkjq",
    "fieldtype": "Column Break"
   },
   {
-   "default": "0",
    "fieldname": "book_credit",
    "fieldtype": "Int",
    "label": "Book Credit",
-   "non_negative": 1
+   "non_negative": 1,
+   "read_only": 1
   },
   {
-   "default": "Standard",
+   "fetch_from": "email.membership_type",
    "fieldname": "membership_type",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "label": "Membership",
-   "options": "Standard\nPremium"
+   "read_only": 1
   },
   {
-   "default": "0",
    "fieldname": "book_limit",
    "fieldtype": "Int",
-   "label": "Book Limit"
+   "label": "Book Limit",
+   "read_only": 1
   },
   {
-   "default": "0",
    "fieldname": "magazine_limit",
    "fieldtype": "Int",
-   "label": "Magzine Limit"
+   "label": "Magzine Limit",
+   "read_only": 1
   },
   {
-   "default": "0",
    "fieldname": "rented_magazines",
    "fieldtype": "Int",
-   "label": "Rented Magazines"
+   "label": "Rented Magazines",
+   "read_only": 1
   },
   {
-   "default": "0",
    "fieldname": "magzine_credit",
    "fieldtype": "Int",
-   "label": "Magzine Credit"
+   "label": "Magzine Credit",
+   "read_only": 1
   },
   {
-   "default": "0",
    "fieldname": "rented_books",
    "fieldtype": "Int",
-   "label": "Rented Books"
+   "label": "Rented Books",
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -156,10 +152,10 @@
    "search_index": 1
   },
   {
-   "default": "Pay Amount",
+   "fetch_from": "email.valid_upto",
    "fieldname": "transaction_id",
-   "fieldtype": "Data",
-   "label": "Transaction ID",
+   "fieldtype": "Date",
+   "label": "Valid Upto",
    "read_only": 1
   }
  ],
@@ -171,7 +167,7 @@
    "link_fieldname": "tittle"
   }
  ],
- "modified": "2024-07-03 18:41:59.302496",
+ "modified": "2024-07-04 15:34:05.797702",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Members",
@@ -210,7 +206,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Library Member",
+   "role": "Librarian",
    "share": 1,
    "write": 1
   },
@@ -219,10 +215,11 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Librarian",
+   "role": "LIbrary Member",
    "share": 1,
    "write": 1
   }

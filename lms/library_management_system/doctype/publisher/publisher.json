@@ -59,7 +59,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-01 10:55:25.856413",
+ "modified": "2024-07-04 15:32:43.861581",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Publisher",
@@ -105,7 +105,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Library Member",
+   "role": "LIbrary Member",
    "share": 1
   }
  ],

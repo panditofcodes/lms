@@ -161,7 +161,7 @@
    "link_fieldname": "publisher_name"
   }
  ],
- "modified": "2024-07-03 10:59:13.959638",
+ "modified": "2024-07-04 15:32:15.062942",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Items",
@@ -205,13 +205,12 @@
    "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Library Member",
+   "role": "LIbrary Member",
    "share": 1,
    "write": 1
   }

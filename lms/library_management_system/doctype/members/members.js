@@ -10,7 +10,6 @@ frappe.ui.form.on("Members", {
 		$('div[data-fieldname="personal_information"]').css({
 			border: "none",
 		});
-		setValue(frm);
 	},
 	// before_save: function(frm){
 	// 	if(frm.doc.membership === "Standard"){
@@ -22,12 +21,8 @@ frappe.ui.form.on("Members", {
 	// 	}
 	// },
 
-	membership_type: function (frm) {
+	email: function (frm) {
 		setValue(frm);
-	},
-
-	after_save(frm) {
-		frappe.set_route("Form", "subscription", "new");
 	},
 });
 
@@ -43,4 +38,11 @@ function setValue(frm) {
 		frm.set_value("magzine_credit", 1500);
 		frm.set_value("magazine_limit", 1500);
 	}
+}
+
+async function getSubscriptionDetail(frm) {
+	userMail = frm.doc.email;
+	await frappe.db.get_value("Subscription", { email: userMail }).then((r) => {
+		console.log(r);
+	});
 }

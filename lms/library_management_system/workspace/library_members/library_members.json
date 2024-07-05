@@ -1,0 +1,58 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"FI6l_bQ11R\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Library Members<br></span>\",\"col\":12}},{\"id\":\"KLX9X51fL_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profile\",\"col\":3}},{\"id\":\"zroXay-yK6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Books\",\"col\":3}},{\"id\":\"ieilLVVKRw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Magazines\",\"col\":3}}]",
+ "creation": "2024-07-02 13:14:34.951295",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "customer",
+ "idx": 1,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Library Members",
+ "links": [],
+ "modified": "2024-07-04 15:40:34.502193",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Library Members",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "LIbrary Member"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Profile",
+   "link_to": "User",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Magazines",
+   "link_to": "Items",
+   "stats_filter": "[[\"Items\",\"item_type\",\"=\",\"Magazine\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Books",
+   "link_to": "Items",
+   "stats_filter": "[[\"Items\",\"item_type\",\"=\",\"Book\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Library Members"
+}

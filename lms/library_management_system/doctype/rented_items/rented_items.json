@@ -99,7 +99,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Allotted Items",
+   "options": "Rented Items",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -144,7 +144,7 @@
    "link_fieldname": "member_name"
   }
  ],
- "modified": "2024-07-03 11:01:49.550938",
+ "modified": "2024-07-04 15:34:42.877023",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Rented Items",
@@ -189,12 +189,13 @@
   },
   {
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Library Member",
+   "role": "LIbrary Member",
    "share": 1,
    "write": 1
   }
