@@ -144,7 +144,7 @@
    "link_fieldname": "member_name"
   }
  ],
- "modified": "2024-07-04 15:34:42.877023",
+ "modified": "2024-07-08 11:55:39.362092",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Rented Items",
@@ -160,42 +160,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Administrator",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Librarian",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "LIbrary Member",
    "share": 1,
    "write": 1
   }

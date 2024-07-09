@@ -1,0 +1,65 @@
+<div>
+	<div class="book-box">
+		<div class="title-image">
+			<h4>{{ (doc.tittle or doc.name) |e }}</h4>
+			<img src="{{ doc.profile_photo }}" alt="Item Image" />
+		</div>
+
+		<div class="book-detail">
+			<h6>{{ doc.writter }}</h6>
+			{%if doc.item_status == 'Available'%}
+			<h6 style="color: green">{{ doc.item_status }}</h6>
+			{%else%}
+			<h6 style="color: red">{{ doc.item_status }}</h6>
+			{%endif%}
+		</div>
+
+		<div class="book-desc">
+			<p>{{ doc.description }}</p>
+		</div>
+
+		<a href="/{{ doc.route |e }}">See Book</a>
+	</div>
+</div>
+<style>
+	.book-box {
+		margin: 10px;
+		border: 1px solid gray;
+		border-radius: 10px;
+		padding: 10px 10px 10px 50px;
+		background-color: #f9f9f9;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+	.title-image {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.title-image img {
+		width: 200px;
+	}
+	.book-detail,
+	.book-desc {
+		margin-top: 10px;
+	}
+	.book-detail h6 {
+		margin: 0;
+		color: #555;
+	}
+	.book-desc p {
+		margin: 0;
+		color: #333;
+	}
+	.book-box a {
+		display: inline-block;
+		margin-top: 10px;
+		padding: 5px 10px;
+		background-color: #007bff;
+		color: white;
+		text-decoration: none;
+		border-radius: 5px;
+	}
+	a:hover {
+		background-color: #0056b3; /* Darker background on hover */
+	}
+</style>

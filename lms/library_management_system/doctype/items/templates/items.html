@@ -1,0 +1,139 @@
+{% extends "templates/web.html" %} {% block page_content %}
+<div class="item">
+	<div class="info-sec-1">
+		<div class="info-1">
+			<div class="title">
+				<h4>{{ (doc.tittle or doc.name) |e }}</h4>
+
+				{%if doc.item_status == 'Available'%}
+				<h6 style="color: green">{{ doc.item_status }}</h6>
+				{%else%}
+				<h6 style="color: red">{{ doc.item_status }}</h6>
+				{%endif%}
+			</div>
+			<div class="other-info">
+				<div class="sub-other-info">
+					<h5>Writer:</h5>
+					<h6>{{ doc.writter }}</h6>
+				</div>
+				<div class="sub-other-info">
+					<h5>Publisher:</h5>
+					<h6>{{ doc.publisher }}</h6>
+				</div>
+				<div class="sub-other-info">
+					<h5>Category:</h5>
+					<h6>{{ doc.category }}</h6>
+				</div>
+				<div class="sub-other-info">
+					<h5>ISBN:</h5>
+					<h6>{{ doc.isbn }}</h6>
+				</div>
+			</div>
+		</div>
+		<img src="{{ doc.profile_photo }}" alt="Item Image" />
+	</div>
+	<div class="item-desc">
+		<textarea name="item-desc" id="item-desc" disabled>{{ doc.description }}</textarea>
+	</div>
+	{% if doc.item_status == 'Available' %}
+	<button class="get-book-btn">Get Book</button>
+	{% else %}
+	<button class="request-book-btn">Request for Book</button>
+	{% endif %}
+</div>
+<style>
+	.item {
+		margin: 20px;
+		padding: 20px;
+		font-family: Arial, sans-serif;
+	}
+	.info-sec-1 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.info-1 {
+		display: flex;
+		flex-direction: column;
+	}
+	.title {
+		flex: 1;
+	}
+	.title h4 {
+		margin: 0;
+		font-size: 24px;
+	}
+	.title h6 {
+		margin: 5px 0;
+		font-size: 16px;
+	}
+	.other-info {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-left: 20px;
+	}
+	.sub-other-info {
+		display: flex;
+		align-items: center;
+		margin-bottom: 5px;
+	}
+	.sub-other-info h5 {
+		margin: 0 10px 0 0;
+		font-weight: bold;
+	}
+	.sub-other-info h6 {
+		margin: 0;
+		font-weight: normal;
+		color: #555;
+	}
+	.item-desc {
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 1.6;
+	}
+	.item-desc textarea {
+		width: 100%;
+		padding: 10px;
+		font-size: 16px;
+		line-height: 1.5;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		resize: none;
+	}
+	.item-desc textarea:disabled {
+		background-color: #f5f5f5;
+		color: #555;
+		cursor: not-allowed;
+	}
+	.info-sec-1 img {
+		max-width: 100%;
+		width: 300px;
+		height: auto;
+		border-radius: 8px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease-in-out;
+	}
+	.info-sec-1 img:hover {
+		transform: scale(1.3);
+	}
+	.get-book-btn,
+	.request-book-btn {
+		display: inline-block;
+		padding: 10px 20px;
+		font-size: 16px;
+		color: #fff;
+		background-color: #007bff;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	.get-book-btn:hover,
+	.request-book-btn:hover {
+		background-color: #0056b3;
+	}
+</style>
+{% endblock %}

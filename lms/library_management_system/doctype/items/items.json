@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "autoname": "format:{#####}",
  "creation": "2024-06-29 15:26:00.603514",
  "doctype": "DocType",
@@ -26,7 +27,9 @@
   "description",
   "wait_list_sec",
   "wait_list",
-  "create_btn"
+  "create_btn",
+  "route",
+  "is_published"
  ],
  "fields": [
   {
@@ -148,9 +151,22 @@
    "hidden": 1,
    "is_virtual": 1,
    "label": "Create Button"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is_published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [
   {
    "link_doctype": "Category",
@@ -161,7 +177,7 @@
    "link_fieldname": "publisher_name"
   }
  ],
- "modified": "2024-07-04 15:32:15.062942",
+ "modified": "2024-07-09 12:47:32.670198",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Items",
@@ -179,42 +195,9 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Administrator",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Librarian",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "LIbrary Member",
-   "share": 1,
-   "write": 1
   }
  ],
+ "route": "library",
  "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
