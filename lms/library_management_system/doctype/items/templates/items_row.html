@@ -15,10 +15,12 @@
 		</div>
 
 		<div class="book-desc">
-			<p>{{ doc.description }}</p>
+			<textarea name="book-desc" id="book-desc" rows="10" cols="100" readonly>
+{{ doc.description }}</textarea
+			>
 		</div>
 
-		<a href="/{{ doc.route |e }}">See Book</a>
+		<a href="/{{ doc.route |e }}">More Details</a>
 	</div>
 </div>
 <style>
@@ -46,10 +48,22 @@
 		margin: 0;
 		color: #555;
 	}
-	.book-desc p {
+	.book-desc textarea {
+		border: none; 
 		margin: 0;
+		padding: 10px; 
+		background-color: #f9f9f9;
 		color: #333;
+		resize: none; 
+		overflow: hidden; 
+		text-overflow: ellipsis; 
+		font-family: Arial, sans-serif; 
+		font-size: 14px; 
+		line-height: 1.5; 
+		width: 100%; 
+		outline: none; 
 	}
+
 	.book-box a {
 		display: inline-block;
 		margin-top: 10px;
