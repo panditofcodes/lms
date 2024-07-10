@@ -33,7 +33,8 @@ frappe.ui.form.on("Items", {
 						});
 					} else {
 						frm.add_custom_button(`Request ${frm.doc.item_type}`, () => {
-							frappe.msgprint("Join Waitlist!");
+							currentUser = frappe.session.user;
+							joinWaitList(currentUser);
 						});
 					}
 				} else {
@@ -51,14 +52,15 @@ frappe.ui.form.on("Items", {
 			validated = false;
 			frappe.msgprint("Please select item type");
 		}
-		frm.set_value("create_btn", 1);
 	},
 });
 
 function getItem(frm, userDetails, allotItem) {
 	if (frm.doc.item_type === "Book") {
 		if (userDetails.book_credit === 0) {
-			return frappe.msgprint("You do not have credits.Upgrade your plan or wait for next month.");
+			return frappe.msgprint(
+				"You do not have credits.Upgrade your plan or wait for next month."
+			);
 		} else {
 			if (userDetails.rented_books >= userDetails.book_limit) {
 				return frappe.msgprint(
@@ -69,7 +71,9 @@ function getItem(frm, userDetails, allotItem) {
 		}
 	} else {
 		if (userDetails.magazine_credit === 0) {
-			return frappe.msgprint("You do not have credits.Upgrade your plan or wait for next month.");
+			return frappe.msgprint(
+				"You do not have credits.Upgrade your plan or wait for next month."
+			);
 		} else {
 			if (userDetails.rented_magazines >= userDetails.magazine_limit) {
 				return frappe.msgprint(
@@ -86,4 +90,40 @@ function getItem(frm, userDetails, allotItem) {
 		new_doc.member = userDetails.name;
 		frappe.set_route("Form", "Rented Items", new_doc.name);
 	}
+}
+
+function joinWaitList(currentUser) {
+	frappe.prompt(
+		[
+			{
+				label: "Item",
+				fieldname: "item_id",
+				fieldtype: "Link",
+				options: "Items",
+				reqd: 1,
+			},
+			{
+				label: "Member ID",
+				fieldname: "member_id",
+				fieldtype: "Link",
+				options: "Members",
+				reqd: 1,
+			},
+		],
+		(values) => {
+			frappe.call({
+				method: "lms.library_management_system.api.join_waitlist",
+				type: "POST",
+				args: values,
+				callback: function (response) {
+					if (response.message) {
+						frappe.msgprint(response.message);
+					} else {
+						frappe.msgprint("Failed to join waitlist.");
+					}
+				},
+			});
+		},
+		"Enter Item and Member Details"
+	);
 }

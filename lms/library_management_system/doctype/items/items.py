@@ -6,4 +6,5 @@ from frappe.website.website_generator import WebsiteGenerator
 
 
 class Items(WebsiteGenerator):
-	pass
+	def onload(self):
+		self.create_btn = 1

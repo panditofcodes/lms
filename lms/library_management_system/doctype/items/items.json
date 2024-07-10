@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_guest_to_view": 1,
+ "allow_rename": 1,
  "autoname": "format:{#####}",
  "creation": "2024-06-29 15:26:00.603514",
  "doctype": "DocType",
@@ -177,7 +178,7 @@
    "link_fieldname": "publisher_name"
   }
  ],
- "modified": "2024-07-10 10:36:09.023918",
+ "modified": "2024-07-10 13:19:36.015694",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Items",

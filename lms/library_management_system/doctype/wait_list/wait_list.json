@@ -7,7 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "wait_list_section",
+  "created_at",
+  "column_break_69mg",
   "item",
+  "column_break_hmzm",
   "member"
  ],
  "fields": [
@@ -19,20 +22,38 @@
   {
    "fieldname": "item",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Item",
-   "options": "Items"
+   "options": "Items",
+   "reqd": 1
   },
   {
    "fieldname": "member",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Member",
-   "options": "Members"
+   "options": "Members",
+   "reqd": 1
+  },
+  {
+   "fieldname": "created_at",
+   "fieldtype": "Datetime",
+   "label": "Created At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_69mg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hmzm",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-07-02 12:51:45.034978",
+ "modified": "2024-07-10 12:22:16.495067",
  "modified_by": "Administrator",
  "module": "Library Management System",
  "name": "Wait List",
