@@ -56,6 +56,15 @@ frappe.ui.form.on("Items", {
 });
 
 function getItem(frm, userDetails, allotItem) {
+	if (!userDetails) {
+		return frappe.show_alert(
+			{
+				message: __("Unable to get user details!"),
+				indicator: "red",
+			},
+			5
+		);
+	}
 	if (frm.doc.item_type === "Book") {
 		if (userDetails.book_credit === 0) {
 			return frappe.msgprint(
